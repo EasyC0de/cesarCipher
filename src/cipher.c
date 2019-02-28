@@ -18,9 +18,9 @@ char encryptLetter(char str, int key){
 char decryptLetter(char str, int key){
     char s;
     if(str >= 'a' && str <= 'z'){
-        s = (((str-key) - 'a')%26)+'a';
+        s = (((26+str-key) - 'a')%26)+'a';
     }else if( str >= 'A' && str <= 'Z'){
-        s = (((str-key) - 'A')%26)+'A';
+        s = (((26+str-key) - 'A')%26)+'A';
     }
     return s;
 }
